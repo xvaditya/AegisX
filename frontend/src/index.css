@@ -1,0 +1,94 @@
+/* ── AegisX Global Styles ── */
+@import "tailwindcss";
+
+/* ── Custom Theme Variables ── */
+:root {
+  --aegis-bg: #0a0b0f;
+  --aegis-surface: #12141a;
+  --aegis-surface-2: #1a1c24;
+  --aegis-border: rgba(75, 85, 99, 0.25);
+  --aegis-text: #e5e7eb;
+  --aegis-text-dim: #9ca3af;
+  --aegis-green: #4ade80;
+  --aegis-red: #ef4444;
+  --aegis-yellow: #facc15;
+  --aegis-blue: #3b82f6;
+  --aegis-orange: #f97316;
+  --aegis-rock: #4b5563;
+}
+
+/* ── Google Font ── */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+/* ── Base Resets ── */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  background: var(--aegis-bg);
+  color: var(--aegis-text);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow: hidden;
+  min-height: 100vh;
+}
+
+/* ── Background Pattern ── */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background:
+    radial-gradient(circle at 20% 20%, rgba(74, 222, 128, 0.03) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(59, 130, 246, 0.03) 0%, transparent 50%),
+    radial-gradient(circle at 50% 50%, rgba(250, 204, 21, 0.02) 0%, transparent 50%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+#root {
+  position: relative;
+  z-index: 1;
+  min-height: 100vh;
+}
+
+/* ── Scrollbar ── */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(75, 85, 99, 0.3);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(75, 85, 99, 0.5);
+}
+
+/* ── Selection ── */
+::selection {
+  background: rgba(74, 222, 128, 0.25);
+  color: #fff;
+}
+
+/* ── Code font ── */
+code, pre, .mono {
+  font-family: 'JetBrains Mono', monospace;
+}

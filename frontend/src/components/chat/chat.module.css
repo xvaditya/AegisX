@@ -1,0 +1,120 @@
+/* ── Chat Styles ── */
+
+.panel {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.messages {
+  flex: 1;
+  overflow-y: auto;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.messages::-webkit-scrollbar {
+  width: 4px;
+}
+
+.messages::-webkit-scrollbar-thumb {
+  background: #4b556340;
+  border-radius: 4px;
+}
+
+.message {
+  max-width: 85%;
+  padding: 10px 14px;
+  border-radius: 12px;
+  font-size: 13px;
+  line-height: 1.5;
+  animation: fadeSlide 0.3s ease;
+}
+
+.messageUser {
+  align-self: flex-end;
+  background: rgba(59, 130, 246, 0.2);
+  border: 1px solid rgba(59, 130, 246, 0.3);
+  color: #bfdbfe;
+  border-bottom-right-radius: 4px;
+}
+
+.messageAssistant {
+  align-self: flex-start;
+  background: rgba(75, 85, 99, 0.25);
+  border: 1px solid rgba(75, 85, 99, 0.3);
+  color: #d1d5db;
+  border-bottom-left-radius: 4px;
+}
+
+.messageSystem {
+  align-self: center;
+  background: rgba(74, 222, 128, 0.1);
+  border: 1px solid rgba(74, 222, 128, 0.2);
+  color: #86efac;
+  font-size: 11px;
+  max-width: 95%;
+  text-align: center;
+}
+
+.inputArea {
+  display: flex;
+  gap: 8px;
+  padding: 12px;
+  border-top: 1px solid rgba(75, 85, 99, 0.2);
+}
+
+.input {
+  flex: 1;
+  background: rgba(30, 32, 40, 0.8);
+  border: 1px solid rgba(75, 85, 99, 0.3);
+  border-radius: 10px;
+  padding: 10px 14px;
+  color: #e5e7eb;
+  font-size: 13px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.input:focus {
+  border-color: rgba(74, 222, 128, 0.5);
+}
+
+.input::placeholder {
+  color: #6b7280;
+}
+
+.sendButton {
+  padding: 10px 16px;
+  border-radius: 10px;
+  background: rgba(74, 222, 128, 0.2);
+  border: 1px solid rgba(74, 222, 128, 0.3);
+  color: #4ade80;
+  font-size: 13px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.sendButton:hover {
+  background: rgba(74, 222, 128, 0.3);
+  transform: translateY(-1px);
+}
+
+.empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 40px;
+  color: #6b7280;
+  font-size: 13px;
+  text-align: center;
+}
+
+@keyframes fadeSlide {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}

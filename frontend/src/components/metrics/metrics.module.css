@@ -1,0 +1,85 @@
+/* ── Metrics Styles ── */
+
+.panel {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.gauge {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.gaugeHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.gaugeLabel {
+  font-size: 11px;
+  color: #9ca3af;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.gaugeValue {
+  font-size: 13px;
+  font-weight: 700;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.gaugeBar {
+  height: 6px;
+  border-radius: 3px;
+  background: rgba(75, 85, 99, 0.3);
+  overflow: hidden;
+}
+
+.gaugeFill {
+  height: 100%;
+  border-radius: 3px;
+  transition: width 0.5s ease, background-color 0.3s ease;
+}
+
+.networkStats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+.netStat {
+  padding: 8px 10px;
+  background: rgba(30, 32, 40, 0.6);
+  border-radius: 8px;
+  border: 1px solid rgba(75, 85, 99, 0.2);
+}
+
+.netLabel {
+  font-size: 10px;
+  color: #6b7280;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.netValue {
+  font-size: 13px;
+  font-weight: 600;
+  color: #d1d5db;
+  font-family: 'JetBrains Mono', monospace;
+  margin-top: 2px;
+}
+
+.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  color: #6b7280;
+  font-size: 13px;
+}

@@ -1,0 +1,14 @@
+{
+  "name": "aegisx-desktop",
+  "version": "1.0.0",
+  "description": "AegisX Desktop — Floating AI Incident Assistant",
+  "main": "src/main/index.js",
+  "scripts": {
+    "dev": "electron .",
+    "start": "electron ."
+  },
+  "dependencies": {
+    "electron": "^33.0.0"
+  },
+  "devDependencies": {}
+}

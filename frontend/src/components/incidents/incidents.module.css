@@ -1,0 +1,83 @@
+/* ── Incident Styles ── */
+
+.feed {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  overflow-y: auto;
+  max-height: 100%;
+  padding-right: 4px;
+}
+
+.feed::-webkit-scrollbar {
+  width: 4px;
+}
+
+.feed::-webkit-scrollbar-thumb {
+  background: #4b556340;
+  border-radius: 4px;
+}
+
+.card {
+  padding: 12px 16px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border-left: 3px solid transparent;
+}
+
+.card:hover {
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.cardSelected {
+  background: rgba(255, 255, 255, 0.05) !important;
+  border-left-color: currentColor;
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 6px;
+}
+
+.cardType {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+  font-size: 13px;
+}
+
+.cardTime {
+  font-size: 11px;
+  color: #6b7280;
+}
+
+.cardDesc {
+  font-size: 12px;
+  color: #9ca3af;
+  line-height: 1.4;
+  margin-top: 4px;
+}
+
+.cardMeta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 8px;
+  font-size: 11px;
+  color: #6b7280;
+}
+
+.emptyFeed {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  color: #6b7280;
+  font-size: 13px;
+  text-align: center;
+  gap: 8px;
+}

@@ -1,0 +1,27 @@
+# AegisX specific
+backend/venv/
+terminal/venv/
+__pycache__/
+*.pyc
+.env
+
+# Node
+node_modules/
+dist/
+.vite/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Build
+*.exe
+*.dmg
+*.AppImage
+out/
