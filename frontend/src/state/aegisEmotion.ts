@@ -97,7 +97,7 @@ export function useAegisEmotion(initialState: MascotState = 'idle') {
   const [snapshot, setSnapshot] = useState<AegisEmotionSnapshot>({
     state: initialState,
     event: 'default',
-    since: Date.now(),
+    since: 0,
   });
   const transientTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
   const idleTimer = useRef<ReturnType<typeof setTimeout> | null>(null);

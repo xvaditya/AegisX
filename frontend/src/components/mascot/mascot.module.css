@@ -1,6 +1,6 @@
 .mascotContainer {
   --aegis-size: 140px;
-  --aegis-accent: #00ff41;
+  --aegis-accent: #38bdf8;
   position: relative;
   display: grid;
   place-items: center;
@@ -13,7 +13,7 @@
   height: var(--aegis-size);
   transform-origin: 50% 82%;
   image-rendering: pixelated;
-  filter: drop-shadow(0 0 20px rgba(0, 255, 65, 0.2));
+  filter: drop-shadow(0 0 20px rgba(56, 189, 248, 0.2));
 }
 
 .avatarImage {
@@ -75,7 +75,7 @@
 
 .stateSleeping {
   animation: sleepBreath 4s steps(4) infinite;
-  filter: saturate(0.82) drop-shadow(0 0 10px rgba(0, 255, 65, 0.1));
+  filter: saturate(0.82) drop-shadow(0 0 10px rgba(56, 189, 248, 0.1));
 }
 
 @keyframes idleBounce {
@@ -89,8 +89,8 @@
 }
 
 @keyframes scanPulse {
-  0%, 100% { transform: translateY(0); filter: drop-shadow(0 0 0 rgba(0, 255, 65, 0)); }
-  50% { transform: translateY(-2%); filter: drop-shadow(0 0 12px rgba(0, 255, 65, 0.8)); }
+  0%, 100% { transform: translateY(0); filter: drop-shadow(0 0 0 rgba(56, 189, 248, 0)); }
+  50% { transform: translateY(-2%); filter: drop-shadow(0 0 12px rgba(56, 189, 248, 0.8)); }
 }
 
 @keyframes thinkTilt {
@@ -118,8 +118,8 @@
 }
 
 @keyframes healPulse {
-  0%, 100% { filter: drop-shadow(0 0 8px rgba(0, 255, 65, 0.4)); }
-  50% { filter: drop-shadow(0 0 20px rgba(0, 255, 65, 0.8)); }
+  0%, 100% { filter: drop-shadow(0 0 8px rgba(56, 189, 248, 0.4)); }
+  50% { filter: drop-shadow(0 0 20px rgba(56, 189, 248, 0.8)); }
 }
 
 @keyframes danceJump {

@@ -32,7 +32,7 @@
   font-size: 15px;
   font-weight: 700;
   font-family: 'JetBrains Mono', monospace;
-  color: #00ff41;
+  color: #38bdf8;
 }
 
 .gaugeBar {
@@ -40,15 +40,15 @@
   border-radius: 4px;
   background: rgba(26, 33, 26, 0.8);
   overflow: hidden;
-  border: 1px solid rgba(0, 255, 65, 0.15);
+  border: 1px solid rgba(56, 189, 248, 0.15);
 }
 
 .gaugeFill {
   height: 100%;
   border-radius: 4px;
-  background: linear-gradient(90deg, rgba(0, 255, 65, 0.6) 0%, rgba(0, 255, 65, 0.8) 100%);
+  background: linear-gradient(90deg, rgba(56, 189, 248, 0.6) 0%, rgba(56, 189, 248, 0.8) 100%);
   transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.3s ease;
-  box-shadow: 0 0 12px rgba(0, 255, 65, 0.3);
+  box-shadow: 0 0 12px rgba(56, 189, 248, 0.3);
 }
 
 .networkStats {
@@ -62,14 +62,14 @@
   padding: 12px;
   background: linear-gradient(135deg, rgba(26, 33, 26, 0.4) 0%, rgba(18, 22, 18, 0.3) 100%);
   border-radius: 10px;
-  border: 1px solid rgba(0, 255, 65, 0.12);
+  border: 1px solid rgba(56, 189, 248, 0.12);
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .netStat:hover {
-  border-color: rgba(0, 255, 65, 0.25);
+  border-color: rgba(56, 189, 248, 0.25);
   background: linear-gradient(135deg, rgba(26, 33, 26, 0.6) 0%, rgba(18, 22, 18, 0.5) 100%);
-  box-shadow: 0 4px 12px rgba(0, 255, 65, 0.08);
+  box-shadow: 0 4px 12px rgba(56, 189, 248, 0.08);
 }
 
 .netLabel {
@@ -84,7 +84,7 @@
 .netValue {
   font-size: 14px;
   font-weight: 700;
-  color: #d7ff83;
+  color: #bfdbfe;
   font-family: 'JetBrains Mono', monospace;
   margin-top: 4px;
 }

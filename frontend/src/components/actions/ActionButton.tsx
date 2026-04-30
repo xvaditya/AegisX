@@ -13,7 +13,7 @@ interface ActionButtonProps {
 export function ActionButton({ actionType, onClick, disabled }: ActionButtonProps) {
   return (
     <button
-      className={`${styles.button} ${disabled ? styles.buttonExecuting : ''}`}
+      className={`${styles.button} ${styles[`button_${actionType}`]} ${disabled ? styles.buttonExecuting : ''}`}
       onClick={onClick}
       disabled={disabled}
     >

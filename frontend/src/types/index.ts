@@ -12,6 +12,7 @@ export type IncidentType =
 export type ActionType =
   | 'block_ip'
   | 'restart_service'
+  | 'isolate_node'
   | 'run_scan'
   | 'kill_process'
   | 'view_logs';
@@ -80,6 +81,36 @@ export interface ActionResponse {
   message: string;
   timestamp: string;
   duration_ms: number;
+}
+
+export type LogLevel = 'INFO' | 'WARN' | 'ERROR' | 'DEBUG' | 'SECURITY';
+
+export interface LogEntry {
+  id: string;
+  timestamp: string;
+  service: string;
+  level: LogLevel;
+  message: string;
+}
+
+export interface NetworkNode {
+  id: string;
+  name: string;
+  region: string;
+  status: 'online' | 'degraded' | 'isolated';
+  traffic: number;
+  threats: number;
+  latency: number;
+}
+
+export interface AutomationRule {
+  id: string;
+  name: string;
+  category: string;
+  enabled: boolean;
+  trigger: string;
+  action: string;
+  lastRun: string;
 }
 
 export interface ChatMessage {

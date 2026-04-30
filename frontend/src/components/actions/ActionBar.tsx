@@ -25,7 +25,7 @@ export function ActionBar({ incident, onActionStart, onActionComplete }: ActionB
         : actionType === 'restart_service'
           ? incident.affected_service
           : actionType === 'kill_process'
-            ? 'PID-' + Math.floor(Math.random() * 9000 + 1000)
+            ? `PID-${incident.id.replace(/\D/g, '').slice(-4).padStart(4, '0')}`
             : incident.affected_service;
 
     onActionStart?.(actionType);

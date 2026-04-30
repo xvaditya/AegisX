@@ -18,26 +18,26 @@
 
 /* ── Custom Theme Variables ── */
 :root {
-  --aegis-bg: #0a0d0a;
-  --aegis-surface: #121612;
-  --aegis-surface-2: #1a211a;
+  --aegis-bg: #030712;
+  --aegis-surface: #07111f;
+  --aegis-surface-2: #0b1b2e;
   --aegis-surface-3: #23292a;
-  --aegis-border: rgba(0, 255, 65, 0.15);
-  --aegis-border-light: rgba(0, 255, 65, 0.08);
-  --aegis-text: #f0f4ec;
-  --aegis-text-dim: #95a599;
-  --aegis-text-darker: #7a8678;
-  --aegis-green: #00ff41;
-  --aegis-green-dark: #00cc35;
-  --aegis-green-light: #33ff66;
-  --aegis-green-faint: rgba(0, 255, 65, 0.08);
-  --aegis-mint: #00ff66;
-  --aegis-lime: #d7ff83;
+  --aegis-border: rgba(56, 189, 248, 0.15);
+  --aegis-border-light: rgba(56, 189, 248, 0.08);
+  --aegis-text: #eff6ff;
+  --aegis-text-dim: #94a3b8;
+  --aegis-text-darker: #64748b;
+  --aegis-green: #38bdf8;
+  --aegis-green-dark: #2563eb;
+  --aegis-green-light: #7dd3fc;
+  --aegis-green-faint: rgba(56, 189, 248, 0.08);
+  --aegis-mint: #0ea5e9;
+  --aegis-lime: #bfdbfe;
   --aegis-red: #ef5f52;
   --aegis-yellow: #ffd65e;
   --aegis-blue: #62d8ff;
   --aegis-orange: #f48b4c;
-  --aegis-cream: #f3f6ec;
+  --aegis-cream: #eff6ff;
 }
 
 /* ── Base Resets ── */
@@ -92,10 +92,10 @@ body::before {
   position: fixed;
   inset: 0;
   background:
-    radial-gradient(circle at 15% 25%, rgba(0, 255, 65, 0.08) 0%, transparent 35%),
-    radial-gradient(circle at 85% 10%, rgba(0, 255, 65, 0.06) 0%, transparent 30%),
+    radial-gradient(circle at 15% 25%, rgba(56, 189, 248, 0.08) 0%, transparent 35%),
+    radial-gradient(circle at 85% 10%, rgba(56, 189, 248, 0.06) 0%, transparent 30%),
     radial-gradient(circle at 50% 50%, rgba(0, 0, 0, 0.1) 0%, transparent 40%),
-    linear-gradient(135deg, #0a0d0a 0%, #0d100d 50%, #0a0d0a 100%);
+    linear-gradient(135deg, #030712 0%, #050816 50%, #030712 100%);
   pointer-events: none;
   z-index: 0;
 }
@@ -105,8 +105,8 @@ body::after {
   position: fixed;
   inset: 0;
   background-image:
-    radial-gradient(circle at 15% 25%, rgba(0, 255, 65, 0.08) 0 0.5px, transparent 0.5px),
-    radial-gradient(circle at 85% 10%, rgba(0, 255, 65, 0.06) 0 0.5px, transparent 0.5px);
+    radial-gradient(circle at 15% 25%, rgba(56, 189, 248, 0.08) 0 0.5px, transparent 0.5px),
+    radial-gradient(circle at 85% 10%, rgba(56, 189, 248, 0.06) 0 0.5px, transparent 0.5px);
   background-size: 21px 21px, 27px 27px;
   opacity: 0.04;
   pointer-events: none;
@@ -126,24 +126,24 @@ body::after {
 }
 
 ::-webkit-scrollbar-track {
-  background: rgba(0, 255, 65, 0.05);
+  background: rgba(56, 189, 248, 0.05);
   border-radius: 3px;
 }
 
 ::-webkit-scrollbar-thumb {
   background: linear-gradient(to bottom, var(--aegis-green), var(--aegis-green-dark));
   border-radius: 3px;
-  box-shadow: 0 0 10px rgba(0, 255, 65, 0.3);
+  box-shadow: 0 0 10px rgba(56, 189, 248, 0.3);
 }
 
 ::-webkit-scrollbar-thumb:hover {
   background: linear-gradient(to bottom, var(--aegis-green-light), var(--aegis-green));
-  box-shadow: 0 0 15px rgba(0, 255, 65, 0.5);
+  box-shadow: 0 0 15px rgba(56, 189, 248, 0.5);
 }
 
 /* ── Bento Card Styles ── */
 .bento-card {
-  background: linear-gradient(135deg, rgba(18, 22, 18, 0.8) 0%, rgba(26, 33, 26, 0.6) 100%);
+  background: linear-gradient(135deg, rgba(7, 17, 31, 0.8) 0%, rgba(11, 27, 46, 0.6) 100%);
   border: 1px solid var(--aegis-border);
   border-radius: 12px;
   padding: 1.5rem;
@@ -157,19 +157,19 @@ body::after {
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, transparent 0%, rgba(0, 255, 65, 0.03) 100%);
+  background: linear-gradient(135deg, transparent 0%, rgba(56, 189, 248, 0.03) 100%);
   pointer-events: none;
 }
 
 .bento-card:hover {
   border-color: var(--aegis-green);
-  box-shadow: 0 0 20px rgba(0, 255, 65, 0.15), inset 0 0 20px rgba(0, 255, 65, 0.05);
+  box-shadow: 0 0 20px rgba(56, 189, 248, 0.15), inset 0 0 20px rgba(56, 189, 248, 0.05);
   transform: translateY(-2px);
 }
 
 /* ── Glass Panel ── */
 .glass-panel {
-  background: rgba(18, 22, 18, 0.4);
+  background: rgba(7, 17, 31, 0.4);
   border: 1px solid var(--aegis-border-light);
   backdrop-filter: blur(16px);
   border-radius: 16px;
@@ -185,28 +185,28 @@ body::after {
 
 .gradient-green-glow {
   background: linear-gradient(135deg, var(--aegis-green) 0%, var(--aegis-green-light) 100%);
-  filter: drop-shadow(0 0 8px rgba(0, 255, 65, 0.3));
+  filter: drop-shadow(0 0 8px rgba(56, 189, 248, 0.3));
 }
 
 .gradient-border {
   position: relative;
   border: 1px solid transparent;
   background-clip: padding-box;
-  background: linear-gradient(135deg, rgba(18, 22, 18, 0.8), rgba(26, 33, 26, 0.6)) padding-box,
+  background: linear-gradient(135deg, rgba(7, 17, 31, 0.8), rgba(11, 27, 46, 0.6)) padding-box,
               linear-gradient(135deg, var(--aegis-green), var(--aegis-green-dark)) border-box;
 }
 
 /* ── Glow Effects ── */
 .glow-sm {
-  box-shadow: 0 0 10px rgba(0, 255, 65, 0.2);
+  box-shadow: 0 0 10px rgba(56, 189, 248, 0.2);
 }
 
 .glow-md {
-  box-shadow: 0 0 20px rgba(0, 255, 65, 0.25);
+  box-shadow: 0 0 20px rgba(56, 189, 248, 0.25);
 }
 
 .glow-lg {
-  box-shadow: 0 0 30px rgba(0, 255, 65, 0.3), 0 0 60px rgba(0, 255, 65, 0.1);
+  box-shadow: 0 0 30px rgba(56, 189, 248, 0.3), 0 0 60px rgba(56, 189, 248, 0.1);
 }
 
 .glow-animation {
@@ -215,17 +215,17 @@ body::after {
 
 @keyframes glow-pulse {
   0%, 100% {
-    box-shadow: 0 0 10px rgba(0, 255, 65, 0.2);
+    box-shadow: 0 0 10px rgba(56, 189, 248, 0.2);
   }
   50% {
-    box-shadow: 0 0 25px rgba(0, 255, 65, 0.35);
+    box-shadow: 0 0 25px rgba(56, 189, 248, 0.35);
   }
 }
 
 /* ── Status Indicators ── */
 .status-online {
   background: var(--aegis-green);
-  box-shadow: 0 0 10px rgba(0, 255, 65, 0.5);
+  box-shadow: 0 0 10px rgba(56, 189, 248, 0.5);
 }
 
 .status-offline {

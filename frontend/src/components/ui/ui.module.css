@@ -2,15 +2,15 @@
 
 .glowCard {
   background: linear-gradient(135deg, rgba(18, 22, 18, 0.75) 0%, rgba(26, 33, 26, 0.55) 100%);
-  border: 1px solid rgba(0, 255, 65, 0.12);
+  border: 1px solid rgba(56, 189, 248, 0.12);
   border-radius: 16px;
   backdrop-filter: blur(16px);
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .glowCard:hover {
-  border-color: rgba(0, 255, 65, 0.3);
-  box-shadow: 0 8px 24px rgba(0, 255, 65, 0.1);
+  border-color: rgba(56, 189, 248, 0.3);
+  box-shadow: 0 8px 24px rgba(56, 189, 248, 0.1);
 }
 
 .pulseIndicator {
@@ -19,8 +19,8 @@
   border-radius: 50%;
   position: relative;
   display: inline-block;
-  background: #00ff41;
-  box-shadow: 0 0 12px rgba(0, 255, 65, 0.6);
+  background: #38bdf8;
+  box-shadow: 0 0 12px rgba(56, 189, 248, 0.6);
 }
 
 .pulseIndicator::after {
@@ -48,8 +48,8 @@
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  background: linear-gradient(135deg, rgba(0, 255, 65, 0.12) 0%, rgba(0, 200, 50, 0.08) 100%);
-  border: 1px solid rgba(0, 255, 65, 0.25);
-  color: #00ff41;
+  background: linear-gradient(135deg, rgba(56, 189, 248, 0.12) 0%, rgba(37, 99, 235, 0.08) 100%);
+  border: 1px solid rgba(56, 189, 248, 0.25);
+  color: #38bdf8;
   font-family: 'Helvetica', sans-serif;
 }

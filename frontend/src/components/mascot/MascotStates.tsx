@@ -13,13 +13,13 @@ export const MASCOT_STATE_CONFIGS: Record<MascotState, MascotStateConfig> = {
   idle: {
     label: 'All systems nominal',
     aura: 'transparent',
-    accent: '#59b83f',
+    accent: '#2563eb',
     expression: 'neutral',
   },
   monitoring: {
     label: 'Monitoring systems...',
     aura: 'rgba(82, 183, 136, 0.18)',
-    accent: '#52b788',
+    accent: '#38bdf8',
     expression: 'neutral',
   },
   scanning: {
@@ -53,14 +53,14 @@ export const MASCOT_STATE_CONFIGS: Record<MascotState, MascotStateConfig> = {
   healing: {
     label: 'Applying fix...',
     aura: 'rgba(74, 222, 128, 0.3)',
-    accent: '#4ade80',
+    accent: '#60a5fa',
     expression: 'healing',
     accessory: 'wrench',
   },
   success: {
     label: 'Issue resolved!',
     aura: 'rgba(134, 239, 172, 0.34)',
-    accent: '#86efac',
+    accent: '#93c5fd',
     expression: 'happy',
     accessory: 'sparkles',
   },

@@ -11,7 +11,7 @@
   justify-content: center;
   gap: 12px;
   padding: 40px 24px;
-  color: #d7ff83;
+  color: #bfdbfe;
   font-size: 13px;
   font-family: 'SF Display', sans-serif;
 }
@@ -40,7 +40,7 @@
 .title {
   font-size: 14px;
   font-weight: 700;
-  color: #d7ff83;
+  color: #bfdbfe;
   font-family: 'Helvetica', sans-serif;
   letter-spacing: 0.05em;
   text-transform: uppercase;
@@ -48,11 +48,11 @@
 
 .confidence {
   font-size: 10px;
-  color: #00ff41;
-  background: rgba(0, 255, 65, 0.12);
+  color: #38bdf8;
+  background: rgba(56, 189, 248, 0.12);
   padding: 4px 12px;
   border-radius: 20px;
-  border: 1px solid rgba(0, 255, 65, 0.25);
+  border: 1px solid rgba(56, 189, 248, 0.25);
   font-weight: 700;
   font-family: 'SF Display', sans-serif;
   white-space: nowrap;
@@ -87,9 +87,9 @@
   border-radius: 8px;
   font-size: 11px;
   font-weight: 700;
-  background: rgba(0, 255, 65, 0.12);
-  color: #00ff41;
-  border: 1px solid rgba(0, 255, 65, 0.25);
+  background: rgba(56, 189, 248, 0.12);
+  color: #38bdf8;
+  border: 1px solid rgba(56, 189, 248, 0.25);
   font-family: 'SF Display', sans-serif;
   margin-right: 8px;
   margin-bottom: 8px;
@@ -98,26 +98,26 @@
 .actionSuggestion {
   padding: 12px 14px;
   background: linear-gradient(135deg, rgba(26, 33, 26, 0.4) 0%, rgba(18, 22, 18, 0.3) 100%);
-  border: 1px solid rgba(0, 255, 65, 0.15);
+  border: 1px solid rgba(56, 189, 248, 0.15);
   border-radius: 10px;
   font-size: 12px;
-  color: #d7ff83;
+  color: #bfdbfe;
   line-height: 1.5;
   font-family: 'SF Display', sans-serif;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .actionSuggestion:hover {
-  border-color: rgba(0, 255, 65, 0.3);
+  border-color: rgba(56, 189, 248, 0.3);
   background: linear-gradient(135deg, rgba(26, 33, 26, 0.6) 0%, rgba(18, 22, 18, 0.5) 100%);
-  box-shadow: 0 4px 12px rgba(0, 255, 65, 0.1);
+  box-shadow: 0 4px 12px rgba(56, 189, 248, 0.1);
 }
 
 .spinner {
   width: 24px;
   height: 24px;
-  border: 2px solid rgba(0, 255, 65, 0.2);
-  border-top-color: #00ff41;
+  border: 2px solid rgba(56, 189, 248, 0.2);
+  border-top-color: #38bdf8;
   border-radius: 50%;
   animation: spin 0.8s linear infinite;
 }

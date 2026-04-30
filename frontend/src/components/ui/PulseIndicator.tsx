@@ -7,7 +7,7 @@ interface PulseIndicatorProps {
   size?: number;
 }
 
-export function PulseIndicator({ color = '#4ade80', size = 8 }: PulseIndicatorProps) {
+export function PulseIndicator({ color = '#60a5fa', size = 8 }: PulseIndicatorProps) {
   return (
     <span
       className={styles.pulseIndicator}

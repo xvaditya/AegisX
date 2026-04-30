@@ -48,7 +48,7 @@ export function DashboardModern() {
       inset: 0,
       display: 'flex',
       flexDirection: 'column',
-      backgroundColor: '#0a0d0a',
+      backgroundColor: '#030712',
       color: '#f0f4ec',
       fontFamily: "'SF Display', 'Manrope', sans-serif",
       overflow: 'hidden',
@@ -65,7 +65,7 @@ export function DashboardModern() {
         justifyContent: 'space-between',
         padding: '0 2rem',
         backgroundColor: 'rgba(10, 13, 10, 0.92)',
-        borderBottom: '1px solid rgba(0, 255, 65, 0.12)',
+        borderBottom: '1px solid rgba(56, 189, 248, 0.12)',
         backdropFilter: 'blur(20px)',
         height: '80px',
       }}>
@@ -75,7 +75,7 @@ export function DashboardModern() {
             <h1 style={{
               fontSize: '1.75rem',
               fontWeight: 900,
-              background: 'linear-gradient(135deg, #00ff41 0%, #00cc35 100%)',
+              background: 'linear-gradient(135deg, #38bdf8 0%, #2563eb 100%)',
               WebkitBackgroundClip: 'text',
               WebkitTextFillColor: 'transparent',
               letterSpacing: '-0.04em',
@@ -103,14 +103,14 @@ export function DashboardModern() {
             display: 'flex',
             alignItems: 'center',
             paddingLeft: '2rem',
-            borderLeft: '1px solid rgba(0, 255, 65, 0.1)',
+            borderLeft: '1px solid rgba(56, 189, 248, 0.1)',
           }}>
             <input
               type="text"
               placeholder="Search incidents..."
               style={{
                 backgroundColor: 'rgba(18, 22, 18, 0.6)',
-                border: '1px solid rgba(0, 255, 65, 0.1)',
+                border: '1px solid rgba(56, 189, 248, 0.1)',
                 borderRadius: '8px',
                 padding: '0.5rem 1rem',
                 color: '#f0f4ec',
@@ -120,11 +120,11 @@ export function DashboardModern() {
                 outline: 'none',
               }}
               onFocus={(e) => {
-                e.currentTarget.style.borderColor = 'rgba(0, 255, 65, 0.3)';
-                e.currentTarget.style.boxShadow = '0 0 15px rgba(0, 255, 65, 0.1)';
+                e.currentTarget.style.borderColor = 'rgba(56, 189, 248, 0.3)';
+                e.currentTarget.style.boxShadow = '0 0 15px rgba(56, 189, 248, 0.1)';
               }}
               onBlur={(e) => {
-                e.currentTarget.style.borderColor = 'rgba(0, 255, 65, 0.1)';
+                e.currentTarget.style.borderColor = 'rgba(56, 189, 248, 0.1)';
                 e.currentTarget.style.boxShadow = 'none';
               }}
             />
@@ -133,13 +133,13 @@ export function DashboardModern() {
 
         {/* Right Section */}
         <div style={{ display: 'flex', alignItems: 'center', gap: '2rem' }}>
-          <PulseIndicator isConnected={isConnected} />
+          <PulseIndicator color={isConnected ? '#38bdf8' : '#ef5f52'} />
           <div style={{
             display: 'flex',
             alignItems: 'center',
             gap: '1rem',
             paddingLeft: '1.5rem',
-            borderLeft: '1px solid rgba(0, 255, 65, 0.1)',
+            borderLeft: '1px solid rgba(56, 189, 248, 0.1)',
           }}>
             <span style={{
               fontSize: '0.7rem',
@@ -152,7 +152,7 @@ export function DashboardModern() {
             <span style={{
               fontSize: '0.875rem',
               fontWeight: 700,
-              color: isConnected ? '#00ff41' : '#ef5f52',
+              color: isConnected ? '#38bdf8' : '#ef5f52',
               textShadow: isConnected ? '0 0 12px rgba(0,255,65,0.4)' : 'none',
               fontFamily: "'Helvetica', sans-serif",
               textTransform: 'uppercase',
@@ -183,17 +183,17 @@ export function DashboardModern() {
           display: 'flex',
           flexDirection: 'column',
           background: 'linear-gradient(135deg, rgba(18, 22, 18, 0.75) 0%, rgba(26, 33, 26, 0.55) 100%)',
-          border: '1px solid rgba(0, 255, 65, 0.12)',
+          border: '1px solid rgba(56, 189, 248, 0.12)',
           borderRadius: '16px',
           backdropFilter: 'blur(16px)',
           overflow: 'hidden',
-          boxShadow: '0 8px 32px rgba(0, 255, 65, 0.06)',
+          boxShadow: '0 8px 32px rgba(56, 189, 248, 0.06)',
           transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
         }}>
           {/* Header */}
           <div style={{
             padding: '1.25rem',
-            borderBottom: '1px solid rgba(0, 255, 65, 0.08)',
+            borderBottom: '1px solid rgba(56, 189, 248, 0.08)',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'space-between',
@@ -204,7 +204,7 @@ export function DashboardModern() {
                 width: '10px',
                 height: '10px',
                 borderRadius: '50%',
-                background: '#00ff41',
+                background: '#38bdf8',
                 boxShadow: '0 0 12px rgba(0,255,65,0.6)',
                 animation: 'pulse-green 2s ease-in-out infinite',
               }} />
@@ -214,7 +214,7 @@ export function DashboardModern() {
                 letterSpacing: '0.1em',
                 textTransform: 'uppercase',
                 fontFamily: "'Helvetica', sans-serif",
-                color: '#00ff41',
+                color: '#38bdf8',
                 margin: 0,
               }}>
                 INCIDENT FEED
@@ -233,8 +233,8 @@ export function DashboardModern() {
           <div style={{ flex: 1, overflow: 'auto', padding: '0.75rem' }}>
             <IncidentFeed
               incidents={incidents}
-              selectedIncident={selectedIncident}
-              onSelectIncident={selectIncident}
+              selectedId={selectedIncident?.id ?? null}
+              onSelect={selectIncident}
             />
           </div>
         </section>
@@ -246,16 +246,16 @@ export function DashboardModern() {
           display: 'flex',
           flexDirection: 'column',
           background: 'linear-gradient(135deg, rgba(18, 22, 18, 0.75) 0%, rgba(26, 33, 26, 0.55) 100%)',
-          border: '1px solid rgba(0, 255, 65, 0.12)',
+          border: '1px solid rgba(56, 189, 248, 0.12)',
           borderRadius: '16px',
           backdropFilter: 'blur(16px)',
           overflow: 'hidden',
-          boxShadow: '0 8px 32px rgba(0, 255, 65, 0.06)',
+          boxShadow: '0 8px 32px rgba(56, 189, 248, 0.06)',
         }}>
           {/* Header */}
           <div style={{
             padding: '1.25rem',
-            borderBottom: '1px solid rgba(0, 255, 65, 0.08)',
+            borderBottom: '1px solid rgba(56, 189, 248, 0.08)',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'space-between',
@@ -267,7 +267,7 @@ export function DashboardModern() {
               letterSpacing: '0.1em',
               textTransform: 'uppercase',
               fontFamily: "'Helvetica', sans-serif",
-              color: '#00ff41',
+              color: '#38bdf8',
               margin: 0,
             }}>
               ANALYSIS CORE
@@ -275,7 +275,7 @@ export function DashboardModern() {
             {analysisLoading && (
               <div style={{
                 fontSize: '0.75rem',
-                color: '#d7ff83',
+                color: '#bfdbfe',
                 animation: 'pulse-green 1.5s ease-in-out infinite',
                 fontWeight: 700,
               }}>
@@ -292,7 +292,7 @@ export function DashboardModern() {
                   <AnalysisPanel analysis={analysis} loading={analysisLoading} />
                 </div>
                 <div style={{
-                  borderTop: '1px solid rgba(0, 255, 65, 0.08)',
+                  borderTop: '1px solid rgba(56, 189, 248, 0.08)',
                   padding: '1.25rem',
                   backgroundColor: 'rgba(18, 22, 18, 0.5)',
                 }}>
@@ -354,7 +354,7 @@ export function DashboardModern() {
           {/* Aegis Mascot Card */}
           <div style={{
             background: 'linear-gradient(135deg, rgba(18, 22, 18, 0.75) 0%, rgba(26, 33, 26, 0.55) 100%)',
-            border: '1px solid rgba(0, 255, 65, 0.12)',
+            border: '1px solid rgba(56, 189, 248, 0.12)',
             borderRadius: '16px',
             padding: '2rem 1.5rem',
             backdropFilter: 'blur(16px)',
@@ -363,14 +363,14 @@ export function DashboardModern() {
             alignItems: 'center',
             justifyContent: 'center',
             minHeight: '280px',
-            boxShadow: '0 8px 32px rgba(0, 255, 65, 0.06)',
+            boxShadow: '0 8px 32px rgba(56, 189, 248, 0.06)',
             position: 'relative',
             overflow: 'hidden',
           }}>
             <div style={{
               position: 'absolute',
               inset: 0,
-              background: 'linear-gradient(135deg, transparent 0%, rgba(0, 255, 65, 0.02) 100%)',
+              background: 'linear-gradient(135deg, transparent 0%, rgba(56, 189, 248, 0.02) 100%)',
               pointerEvents: 'none',
             }} />
 
@@ -397,7 +397,7 @@ export function DashboardModern() {
               </p>
               <p style={{
                 fontSize: '0.9rem',
-                color: '#d7ff83',
+                color: '#bfdbfe',
                 fontWeight: 700,
                 fontFamily: "'Helvetica', sans-serif",
                 textTransform: 'uppercase',
@@ -412,19 +412,19 @@ export function DashboardModern() {
           {/* Metrics Card */}
           <div style={{
             background: 'linear-gradient(135deg, rgba(18, 22, 18, 0.75) 0%, rgba(26, 33, 26, 0.55) 100%)',
-            border: '1px solid rgba(0, 255, 65, 0.12)',
+            border: '1px solid rgba(56, 189, 248, 0.12)',
             borderRadius: '16px',
             padding: '1.25rem',
             backdropFilter: 'blur(16px)',
             flex: 1,
             overflow: 'auto',
-            boxShadow: '0 8px 32px rgba(0, 255, 65, 0.06)',
+            boxShadow: '0 8px 32px rgba(56, 189, 248, 0.06)',
             position: 'relative',
           }}>
             <div style={{
               position: 'absolute',
               inset: 0,
-              background: 'linear-gradient(135deg, transparent 0%, rgba(0, 255, 65, 0.02) 100%)',
+              background: 'linear-gradient(135deg, transparent 0%, rgba(56, 189, 248, 0.02) 100%)',
               pointerEvents: 'none',
               borderRadius: '16px',
             }} />
@@ -435,7 +435,7 @@ export function DashboardModern() {
               letterSpacing: '0.1em',
               textTransform: 'uppercase',
               fontFamily: "'Helvetica', sans-serif",
-              color: '#00ff41',
+              color: '#38bdf8',
               marginBottom: '1rem',
               position: 'relative',
               zIndex: 2,
@@ -445,7 +445,7 @@ export function DashboardModern() {
             </h3>
 
             <div style={{ position: 'relative', zIndex: 2 }}>
-              <MetricsPanel metrics={metrics} />
+              <MetricsPanel metrics={metrics} loading={metricsLoading} />
             </div>
           </div>
         </div>
@@ -459,10 +459,10 @@ export function DashboardModern() {
         width: '340px',
         maxHeight: '420px',
         background: 'linear-gradient(135deg, rgba(18, 22, 18, 0.95) 0%, rgba(26, 33, 26, 0.85) 100%)',
-        border: '1px solid rgba(0, 255, 65, 0.15)',
+        border: '1px solid rgba(56, 189, 248, 0.15)',
         borderRadius: '16px',
         backdropFilter: 'blur(20px)',
-        boxShadow: '0 12px 48px rgba(0, 255, 65, 0.12)',
+        boxShadow: '0 12px 48px rgba(56, 189, 248, 0.12)',
         zIndex: 40,
         overflow: 'hidden',
       }}>

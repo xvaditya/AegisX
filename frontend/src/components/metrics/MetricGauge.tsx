@@ -11,7 +11,7 @@ interface MetricGaugeProps {
 }
 
 function getGaugeColor(percent: number): string {
-  if (percent < 50) return '#4ade80';
+  if (percent < 50) return '#60a5fa';
   if (percent < 75) return '#facc15';
   if (percent < 90) return '#f97316';
   return '#ef4444';

@@ -4,7 +4,7 @@ export const API_BASE_URL = '/api';
 export const WS_BASE_URL = `ws://${window.location.hostname}:8000`;
 
 export const SEVERITY_COLORS: Record<string, string> = {
-  low: '#4ade80',
+  low: '#60a5fa',
   medium: '#facc15',
   high: '#f97316',
   critical: '#ef4444',
@@ -56,8 +56,8 @@ export const MASCOT_COLORS: Record<string, string> = {
   thinking: '#facc15',
   alert: '#f97316',
   critical: '#ef4444',
-  healing: '#4ade80',
-  success: '#4ade80',
+  healing: '#60a5fa',
+  success: '#60a5fa',
   sleeping: '#6b7280',
 };
 
